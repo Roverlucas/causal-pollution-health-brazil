@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data (raw data not committed — extracted via pipeline)
+data/raw/
+data/interim/
+data/processed/
+
+# Outputs (regenerable from code)
+outputs/figures/
+outputs/tables/
+outputs/reports/
+outputs/models/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_metadata/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+*.env.local
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
