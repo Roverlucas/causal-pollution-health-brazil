@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "Who Suffers Most? Causal Machine Learning Reveals Heterogeneous Health Effects of Air Pollution Across Brazilian State Capitals"
+type: software
+authors:
+  - family-names: Rover
+    given-names: Lucas
+    orcid: ""
+    affiliation: "Federal University of Technology - Parana (UTFPR)"
+  - family-names: Tadano
+    given-names: Yara de Souza
+    orcid: ""
+    affiliation: "Federal University of Technology - Parana (UTFPR)"
+repository-code: "https://github.com/Roverlucas/causal-pollution-health-brazil"
+url: "https://github.com/Roverlucas/causal-pollution-health-brazil"
+license: MIT
+date-released: "2026-02-22"
+keywords:
+  - causal inference
+  - causal forests
+  - double machine learning
+  - air pollution
+  - PM2.5
+  - respiratory health
+  - hospitalizations
+  - heterogeneous treatment effects
+  - CATE
+  - SHAP
+  - Brazil
+  - environmental epidemiology
+  - public health policy
+abstract: >-
+  Complete analytical pipeline for estimating heterogeneous causal effects
+  of short-term PM2.5 exposure on respiratory hospitalizations across
+  17 Brazilian state capitals (2022-2025), using Honest Causal Forests
+  and Double Machine Learning. Includes data extraction, processing,
+  causal estimation, SHAP explainability, policy counterfactuals, and
+  sensitivity analyses. The study finds a DML ATE of 0.72 additional
+  admissions per city-day (p=0.027) with 16-fold heterogeneity across
+  subpopulations.

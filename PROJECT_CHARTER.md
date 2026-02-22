@@ -3,7 +3,7 @@
 ## Metadata
 - **Project Code:** CPH-BR-2026
 - **Created:** 2026-02-21
-- **Status:** Phase 0 — Kickoff
+- **Status:** Phase 5 — Complete (pipeline executed, manuscript finalized)
 - **PI:** Lucas Rover (UTFPR)
 - **Supervisor:** Dra. Yara de Souza Tadano
 - **Pipeline:** Paper Factory v1.0 (Study Conductor)
@@ -132,13 +132,13 @@ Air pollution does not affect everyone equally. While traditional epidemiologica
 
 | Phase | Duration | Gate | Key Deliverable |
 |-------|----------|------|-----------------|
-| 0 - Kickoff | Days 1-2 | Gate 0 | This charter + journal targets |
-| 1 - Scoping | Days 3-10 | Gate 1 | Evidence matrix + claims map |
-| 2 - Methodology | Days 11-17 | Gate 2 | Methods spec + statistical plan |
-| 3 - Execution | Days 18-30 | Gate 3 | Results + figures |
-| 4 - Writing | Days 31-38 | Gate 4 | Manuscript V1 |
-| 5 - Submission | Days 39-43 | Gate 5 | Formatted + cover letter |
-| Buffer | Days 44-45 | — | Final review |
+| 0 - Kickoff | Days 1-2 | Gate 0 | This charter + journal targets | DONE |
+| 1 - Scoping | Days 3-10 | Gate 1 | Evidence matrix + claims map | DONE |
+| 2 - Methodology | Days 11-17 | Gate 2 | Methods spec + statistical plan | DONE |
+| 3 - Execution | Days 18-30 | Gate 3 | Results + figures | DONE |
+| 4 - Writing | Days 31-38 | Gate 4 | Manuscript V1 | DONE |
+| 5 - Submission | Days 39-43 | Gate 5 | Formatted + cover letter | PENDING |
+| Buffer | Days 44-45 | — | Final review | — |
 
 ---
 
