@@ -80,11 +80,12 @@ def _parse_dates(df: pd.DataFrame, col: str = "date") -> pd.DataFrame:
 
 
 def _filter_respiratory(health: pd.DataFrame) -> pd.DataFrame:
-    """Keep only respiratory hospitalization rows (CID chapter J)."""
-    mask = health["cid_category"].str.upper().str.startswith(CID_RESPIRATORY)
+    """Keep only respiratory hospitalization rows."""
+    # cid_category uses descriptive names ("respiratory", "cardiovascular")
+    mask = health["cid_category"].str.lower().str.contains("respiratory", na=False)
     before = len(health)
     health = health.loc[mask].reset_index(drop=True)
-    logger.info("  Respiratory filter (CID=%s*): %d -> %d rows", CID_RESPIRATORY, before, len(health))
+    logger.info("  Respiratory filter: %d -> %d rows", before, len(health))
     return health
 
 
@@ -261,13 +262,20 @@ def add_derived_features(df: pd.DataFrame) -> pd.DataFrame:
         np.nan,
     )
 
-    # --- Population density (already in demographics, but alias) ---
-    df["pop_density"] = df["density"]
+    # --- Population density (computed from population / known city area) ---
+    city_area = {city: meta["area_km2"] for city, meta in CAPITALS.items()}
+    df["city_area_km2"] = df["city"].map(city_area)
+    df["pop_density"] = np.where(
+        df["population"].notna() & (df["population"] > 0) & df["city_area_km2"].notna(),
+        df["population"] / df["city_area_km2"],
+        np.nan,
+    )
 
-    # --- Percent elderly ---
-    df["pct_elderly"] = np.where(
-        df["population"].notna() & (df["population"] > 0),
-        df["pop_60_plus"] / df["population"],
+    # --- Percent female (proxy for demographic structure) ---
+    df["pct_female"] = np.where(
+        df["population"].notna() & (df["population"] > 0)
+        & df["pop_female"].notna(),
+        df["pop_female"] / df["population"],
         np.nan,
     )
 
@@ -322,8 +330,11 @@ def apply_quality_filters(df: pd.DataFrame) -> pd.DataFrame:
 
     # Log per-city summary
     city_counts = df.groupby("city").size()
-    logger.info("Cities remaining: %d, days range: %d - %d",
-                len(city_counts), city_counts.min(), city_counts.max())
+    if len(city_counts) > 0:
+        logger.info("Cities remaining: %d, days range: %d - %d",
+                    len(city_counts), int(city_counts.min()), int(city_counts.max()))
+    else:
+        logger.warning("No rows remaining after quality filter!")
     return df.reset_index(drop=True)
 
 

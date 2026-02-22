@@ -126,8 +126,8 @@ CF_N_ESTIMATORS = 2000
 CF_MIN_LEAF_SIZE = 20
 CF_HONEST = True
 
-# SHAP subsample for speed
-SHAP_MAX_SAMPLES = 5000
+# SHAP subsample for speed (KernelExplainer is slow, keep reasonable)
+SHAP_MAX_SAMPLES = 500
 
 # Bootstrap for inference
 BOOTSTRAP_N = 1000
@@ -137,33 +137,33 @@ BOOTSTRAP_N = 1000
 # Maps city name (as stored in Supabase) to metadata.
 # ---------------------------------------------------------------------------
 CAPITALS = {
-    "Aracaju":        {"uf": "SE", "ibge": "2800308", "region": "NE"},
-    "Belém":          {"uf": "PA", "ibge": "1501402", "region": "N"},
-    "Belo Horizonte": {"uf": "MG", "ibge": "3106200", "region": "SE"},
-    "Boa Vista":      {"uf": "RR", "ibge": "1400100", "region": "N"},
-    "Brasília":       {"uf": "DF", "ibge": "5300108", "region": "CO"},
-    "Campo Grande":   {"uf": "MS", "ibge": "5002704", "region": "CO"},
-    "Cuiabá":         {"uf": "MT", "ibge": "5103403", "region": "CO"},
-    "Curitiba":       {"uf": "PR", "ibge": "4106902", "region": "S"},
-    "Florianópolis":  {"uf": "SC", "ibge": "4205407", "region": "S"},
-    "Fortaleza":      {"uf": "CE", "ibge": "2304400", "region": "NE"},
-    "Goiânia":        {"uf": "GO", "ibge": "5208707", "region": "CO"},
-    "João Pessoa":    {"uf": "PB", "ibge": "2507507", "region": "NE"},
-    "Macapá":         {"uf": "AP", "ibge": "1600303", "region": "N"},
-    "Maceió":         {"uf": "AL", "ibge": "2704302", "region": "NE"},
-    "Manaus":         {"uf": "AM", "ibge": "1302603", "region": "N"},
-    "Natal":          {"uf": "RN", "ibge": "2408102", "region": "NE"},
-    "Palmas":         {"uf": "TO", "ibge": "1721000", "region": "N"},
-    "Porto Alegre":   {"uf": "RS", "ibge": "4314902", "region": "S"},
-    "Porto Velho":    {"uf": "RO", "ibge": "1100205", "region": "N"},
-    "Recife":         {"uf": "PE", "ibge": "2611606", "region": "NE"},
-    "Rio Branco":     {"uf": "AC", "ibge": "1200401", "region": "N"},
-    "Rio de Janeiro": {"uf": "RJ", "ibge": "3304557", "region": "SE"},
-    "Salvador":       {"uf": "BA", "ibge": "2927408", "region": "NE"},
-    "São Luís":       {"uf": "MA", "ibge": "2111300", "region": "NE"},
-    "São Paulo":      {"uf": "SP", "ibge": "3550308", "region": "SE"},
-    "Teresina":       {"uf": "PI", "ibge": "2211001", "region": "NE"},
-    "Vitória":        {"uf": "ES", "ibge": "3205309", "region": "SE"},
+    "Aracaju":        {"uf": "SE", "ibge": "2800308", "region": "NE", "area_km2": 182},
+    "Belém":          {"uf": "PA", "ibge": "1501402", "region": "N",  "area_km2": 1059},
+    "Belo Horizonte": {"uf": "MG", "ibge": "3106200", "region": "SE", "area_km2": 331},
+    "Boa Vista":      {"uf": "RR", "ibge": "1400100", "region": "N",  "area_km2": 5687},
+    "Brasília":       {"uf": "DF", "ibge": "5300108", "region": "CO", "area_km2": 5761},
+    "Campo Grande":   {"uf": "MS", "ibge": "5002704", "region": "CO", "area_km2": 8093},
+    "Cuiabá":         {"uf": "MT", "ibge": "5103403", "region": "CO", "area_km2": 3292},
+    "Curitiba":       {"uf": "PR", "ibge": "4106902", "region": "S",  "area_km2": 435},
+    "Florianópolis":  {"uf": "SC", "ibge": "4205407", "region": "S",  "area_km2": 675},
+    "Fortaleza":      {"uf": "CE", "ibge": "2304400", "region": "NE", "area_km2": 314},
+    "Goiânia":        {"uf": "GO", "ibge": "5208707", "region": "CO", "area_km2": 729},
+    "João Pessoa":    {"uf": "PB", "ibge": "2507507", "region": "NE", "area_km2": 211},
+    "Macapá":         {"uf": "AP", "ibge": "1600303", "region": "N",  "area_km2": 6407},
+    "Maceió":         {"uf": "AL", "ibge": "2704302", "region": "NE", "area_km2": 509},
+    "Manaus":         {"uf": "AM", "ibge": "1302603", "region": "N",  "area_km2": 11401},
+    "Natal":          {"uf": "RN", "ibge": "2408102", "region": "NE", "area_km2": 167},
+    "Palmas":         {"uf": "TO", "ibge": "1721000", "region": "N",  "area_km2": 2219},
+    "Porto Alegre":   {"uf": "RS", "ibge": "4314902", "region": "S",  "area_km2": 497},
+    "Porto Velho":    {"uf": "RO", "ibge": "1100205", "region": "N",  "area_km2": 34091},
+    "Recife":         {"uf": "PE", "ibge": "2611606", "region": "NE", "area_km2": 218},
+    "Rio Branco":     {"uf": "AC", "ibge": "1200401", "region": "N",  "area_km2": 8834},
+    "Rio de Janeiro": {"uf": "RJ", "ibge": "3304557", "region": "SE", "area_km2": 1200},
+    "Salvador":       {"uf": "BA", "ibge": "2927408", "region": "NE", "area_km2": 693},
+    "São Luís":       {"uf": "MA", "ibge": "2111300", "region": "NE", "area_km2": 583},
+    "São Paulo":      {"uf": "SP", "ibge": "3550308", "region": "SE", "area_km2": 1521},
+    "Teresina":       {"uf": "PI", "ibge": "2211001", "region": "NE", "area_km2": 1392},
+    "Vitória":        {"uf": "ES", "ibge": "3205309", "region": "SE", "area_km2": 97},
 }
 
 REGION_ORDER = ["N", "NE", "CO", "SE", "S"]
@@ -186,7 +186,7 @@ TEMPORAL_CONFOUNDERS = [
 ALL_CONFOUNDERS = WEATHER_CONFOUNDERS + TEMPORAL_CONFOUNDERS
 
 HETEROGENEITY_MODERATORS = [
-    "pop_density", "fleet_per_capita", "pct_elderly",
+    "pop_density", "fleet_per_capita", "pct_female",
     "dtr", "region_N", "region_NE", "region_CO", "region_SE", "region_S",
 ]
 

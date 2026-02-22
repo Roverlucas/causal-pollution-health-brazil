@@ -100,6 +100,7 @@ def fit_linear_dml(
     dml = LinearDML(
         model_y=model_y,
         model_t=model_t,
+        discrete_treatment=True,
         cv=N_FOLDS,
         random_state=RANDOM_SEED,
     )
@@ -119,10 +120,13 @@ def extract_results(
     """Extract ATE, coefficients, and confidence intervals."""
     # ATE
     ate_inf = dml.ate_inference(X=X)
-    ate = float(ate_inf.mean_point)
-    ci_l = float(ate_inf.conf_int_mean()[0][0])
-    ci_u = float(ate_inf.conf_int_mean()[1][0])
-    pval = float(ate_inf.pvalue_mean()[0])
+    ate = float(np.asarray(ate_inf.mean_point).ravel()[0])
+    ci_l = float(np.asarray(ate_inf.conf_int_mean()[0]).ravel()[0])
+    ci_u = float(np.asarray(ate_inf.conf_int_mean()[1]).ravel()[0])
+    # Use zstat to compute pvalue (two-sided)
+    from scipy import stats as sp_stats
+    zstat = float(np.asarray(ate_inf.zstat()).ravel()[0])
+    pval = float(2 * sp_stats.norm.sf(abs(zstat)))
 
     logger.info("ATE = %.4f [%.4f, %.4f], p=%.4e", ate, ci_l, ci_u, pval)
 
@@ -136,10 +140,11 @@ def extract_results(
     # Coefficient table from const_marginal_effect
     try:
         coef_inf = dml.const_marginal_ate_inference(X=X)
-        coefs = coef_inf.mean_point.ravel()
-        coef_ci_l = coef_inf.conf_int_mean()[0].ravel()
-        coef_ci_u = coef_inf.conf_int_mean()[1].ravel()
-        coef_pvals = coef_inf.pvalue_mean().ravel()
+        coefs = np.asarray(coef_inf.mean_point).ravel()
+        coef_ci_l = np.asarray(coef_inf.conf_int_mean()[0]).ravel()
+        coef_ci_u = np.asarray(coef_inf.conf_int_mean()[1]).ravel()
+        coef_zstat = np.asarray(coef_inf.zstat()).ravel()
+        coef_pvals = 2 * sp_stats.norm.sf(np.abs(coef_zstat))
         coef_df = pd.DataFrame({
             "moderator": x_names,
             "coefficient": coefs,

@@ -133,6 +133,7 @@ def fit_causal_forest(
     cf = CausalForestDML(
         model_y=model_y,
         model_t=model_t,
+        discrete_treatment=True,
         n_estimators=CF_N_ESTIMATORS,
         min_samples_leaf=CF_MIN_LEAF_SIZE,
         max_depth=None,
@@ -151,10 +152,14 @@ def fit_causal_forest(
 def extract_ate(cf: CausalForestDML, X: np.ndarray) -> dict:
     """Extract ATE and 95% confidence interval."""
     ate_inference = cf.ate_inference(X=X)
-    ate = float(ate_inference.mean_point)
-    ci_lower = float(ate_inference.conf_int_mean()[0][0])
-    ci_upper = float(ate_inference.conf_int_mean()[1][0])
-    pval = float(ate_inference.pvalue_mean()[0])
+    ate = float(np.asarray(ate_inference.mean_point).ravel()[0])
+    ci = ate_inference.conf_int_mean()
+    ci_lower = float(np.asarray(ci[0]).ravel()[0])
+    ci_upper = float(np.asarray(ci[1]).ravel()[0])
+    # Compute p-value from z-stat (two-sided)
+    from scipy import stats as sp_stats
+    zstat = float(np.asarray(ate_inference.zstat()).ravel()[0])
+    pval = float(2 * sp_stats.norm.sf(abs(zstat)))
     logger.info("ATE = %.4f [%.4f, %.4f], p=%.4e", ate, ci_lower, ci_upper, pval)
     return {
         "ate": ate,
@@ -210,10 +215,12 @@ def best_linear_projection(
     """
     try:
         blp = cf.const_marginal_ate_inference(X=X)
-        coefs = blp.mean_point.ravel()
-        ci_l = blp.conf_int_mean()[0].ravel()
-        ci_u = blp.conf_int_mean()[1].ravel()
-        pvals = blp.pvalue_mean().ravel()
+        coefs = np.asarray(blp.mean_point).ravel()
+        ci_l = np.asarray(blp.conf_int_mean()[0]).ravel()
+        ci_u = np.asarray(blp.conf_int_mean()[1]).ravel()
+        from scipy import stats as sp_stats
+        blp_zstat = np.asarray(blp.zstat()).ravel()
+        pvals = 2 * sp_stats.norm.sf(np.abs(blp_zstat))
 
         blp_df = pd.DataFrame({
             "moderator": x_names,

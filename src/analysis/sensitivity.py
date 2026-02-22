@@ -79,6 +79,7 @@ def _fit_quick_cf(
     cf = CausalForestDML(
         model_y=model_y,
         model_t=model_t,
+        discrete_treatment=True,
         n_estimators=n_estimators,
         min_samples_leaf=CF_MIN_LEAF_SIZE,
         honest=CF_HONEST,
@@ -91,12 +92,14 @@ def _fit_quick_cf(
 
 def _get_ate(cf: CausalForestDML, X: np.ndarray) -> dict:
     """Extract ATE, CI, p-value."""
+    from scipy import stats as sp_stats
     inf = cf.ate_inference(X=X)
+    zstat = float(np.asarray(inf.zstat()).ravel()[0])
     return {
-        "ate": float(inf.mean_point),
-        "ci_lower": float(inf.conf_int_mean()[0][0]),
-        "ci_upper": float(inf.conf_int_mean()[1][0]),
-        "pvalue": float(inf.pvalue_mean()[0]),
+        "ate": float(np.asarray(inf.mean_point).ravel()[0]),
+        "ci_lower": float(np.asarray(inf.conf_int_mean()[0]).ravel()[0]),
+        "ci_upper": float(np.asarray(inf.conf_int_mean()[1]).ravel()[0]),
+        "pvalue": float(2 * sp_stats.norm.sf(abs(zstat))),
     }
 
 
