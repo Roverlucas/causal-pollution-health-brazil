@@ -378,73 +378,95 @@ Note: The robustness value of 0.826 indicates that any unobserved confounder wou
 
 Geospatial map of estimated Conditional Average Treatment Effects (CATEs) across 17 Brazilian state capitals. Dot colour represents CATE magnitude (blue = negative/low, red = high); dot size represents confidence interval width.
 
-*(See: outputs/figures/cate_map_brazil.pdf)*
+![Figure S1: CATE Map of Brazil](../outputs/figures/cate_map_brazil.pdf){width=100%}
+
+\newpage
 
 ### Figure S2: CATE Scatter by Capital
 
 Scatter plot of mean CATE vs mean daily admissions for each capital, coloured by macro-region.
 
-*(See: outputs/figures/cate_scatter_capitals.pdf)*
+![Figure S2: CATE Scatter by Capital](../outputs/figures/cate_scatter_capitals.pdf){width=100%}
+
+\newpage
 
 ### Figure S3: Forest Plot --- ATE by Subgroup
 
 Forest plot of Average Treatment Effects (CF and DML) for total, age-stratified, and sex-stratified outcomes. Diamond = point estimate; horizontal line = 95% confidence interval; vertical dashed line = null effect.
 
-*(See: outputs/figures/forest_ate_subgroups.pdf)*
+![Figure S3: Forest Plot — ATE by Subgroup](../outputs/figures/forest_ate_subgroups.pdf){width=100%}
+
+\newpage
 
 ### Figure S4: Forest Plot --- CLAN Quartiles
 
 Forest plot of Group Average Treatment Effects by CLAN quartile, showing the monotonic gradient from Q1 (lowest vulnerability) to Q4 (highest vulnerability).
 
-*(See: outputs/figures/forest_clan_quartiles.pdf)*
+![Figure S4: Forest Plot — CLAN Quartiles](../outputs/figures/forest_clan_quartiles.pdf){width=100%}
+
+\newpage
 
 ### Figure S5: SHAP Beeswarm Plot
 
 Beeswarm plot of SHAP values for all effect modifiers. Each point represents one city-day observation; horizontal position indicates the SHAP value (positive = higher CATE); colour indicates the feature value (blue = low, red = high).
 
-*(See: outputs/figures/shap_beeswarm_admissions.pdf)*
+![Figure S5: SHAP Beeswarm Plot](../outputs/figures/shap_beeswarm_admissions.pdf){width=100%}
+
+\newpage
 
 ### Figure S6: SHAP Dependence --- DTR
 
 SHAP dependence plot for diurnal temperature range (DTR), showing the non-linear relationship between DTR and its contribution to CATE heterogeneity.
 
-*(See: outputs/figures/shap_dependence_dtr_admissions.pdf)*
+![Figure S6: SHAP Dependence — DTR](../outputs/figures/shap_dependence_dtr_admissions.pdf){width=100%}
+
+\newpage
 
 ### Figure S7: SHAP Dependence --- Population Density
 
 SHAP dependence plot for population density, illustrating how densely populated cities show higher CATE contributions.
 
-*(See: outputs/figures/shap_dependence_pop_density_admissions.pdf)*
+![Figure S7: SHAP Dependence — Population Density](../outputs/figures/shap_dependence_pop_density_admissions.pdf){width=100%}
+
+\newpage
 
 ### Figure S8: SHAP Dependence --- Fleet per Capita
 
 SHAP dependence plot for fleet per capita (vehicles per 1,000 inhabitants).
 
-*(See: outputs/figures/shap_dependence_fleet_per_capita_admissions.pdf)*
+![Figure S8: SHAP Dependence — Fleet per Capita](../outputs/figures/shap_dependence_fleet_per_capita_admissions.pdf){width=100%}
+
+\newpage
 
 ### Figure S9: Policy --- Prevented Admissions by City
 
 Bar chart showing prevented respiratory hospitalisations under WHO compliance for each of the 17 capitals, sorted by magnitude.
 
-*(See: outputs/figures/policy_city_prevented.pdf)*
+![Figure S9: Prevented Admissions by City](../outputs/figures/policy_city_prevented.pdf){width=100%}
+
+\newpage
 
 ### Figure S10: Policy --- Stratified by Vulnerability Quartile
 
 Stacked bar chart showing the distribution of prevented admissions across CATE vulnerability quartiles under the WHO scenario.
 
-*(See: outputs/figures/policy_stratified_quartiles.pdf)*
+![Figure S10: Stratified by Vulnerability Quartile](../outputs/figures/policy_stratified_quartiles.pdf){width=100%}
+
+\newpage
 
 ### Figure S11: Policy --- Threshold Response Curve
 
 Dose-response curve showing prevented admissions as a function of the PM2.5 threshold (15, 25, 35, 50 ug/m3), demonstrating diminishing returns at higher thresholds.
 
-*(See: outputs/figures/policy_threshold_response.pdf)*
+![Figure S11: Threshold Response Curve](../outputs/figures/policy_threshold_response.pdf){width=100%}
+
+\newpage
 
 ### Figure S12: Policy --- Cost Summary
 
 Bar chart of estimated cost savings (R$ millions) under WHO compliance, stratified by vulnerability group.
 
-*(See: outputs/figures/policy_cost_summary.pdf)*
+![Figure S12: Cost Summary](../outputs/figures/policy_cost_summary.pdf){width=100%}
 
 ---
 
