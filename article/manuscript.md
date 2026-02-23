@@ -18,7 +18,7 @@ Lucas Rover^1^ (ORCID: 0000-0001-6641-9224), Yara de Souza Tadano^1^ (ORCID: 000
 
 **Interpretation:** The causal effect of short-term PM2.5 exposure on respiratory hospitalisations in Brazil varies substantially across subpopulations defined by age, fleet density, and thermal stress. Current uniform air quality standards provide inadequate protection to the most vulnerable groups. These findings provide direct evidence for differentiated air quality alerts and inform the ongoing revision of CONAMA standards, demonstrating that heterogeneity in treatment effects is not statistical noise but the signal that equitable public health policy requires.
 
-**Funding:** CAPES (Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior), Brazil.
+**Funding:** Academia Lendaria (private company, AI Education and Training), Brazil.
 
 ---
 
