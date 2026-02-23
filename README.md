@@ -13,35 +13,36 @@
 
 | Metric | Value |
 |--------|-------|
-| **Causal Forest ATE** | 0.60 additional admissions/city-day [-3.67, 4.87] |
-| **DML ATE** | 0.72 additional admissions/city-day [0.08, 1.35], **p=0.027** |
-| **CATE range** | -6.43 to +9.38 (16-fold heterogeneity) |
-| **Top heterogeneity drivers** | DTR (0.594), pop. density (0.457), fleet/capita (0.292) |
-| **Prevented admissions (WHO scenario)** | 3,834 (0.58%, 95% CI: 0.54-0.62%) |
-| **Cost savings** | R$7.47 million |
-| **Placebo test** | p=0.82 (passed) |
-| **OVB robustness value** | 0.826 |
+| **Causal Forest ATE** | 0.39 additional admissions/city-day [-4.20, 4.98], p=0.87 |
+| **DML ATE** | 0.13 additional admissions/city-day [-0.31, 0.56], p=0.56 |
+| **CATE range** | -8.06 to +11.09 (19-fold heterogeneity) |
+| **Top heterogeneity drivers** | Pop. density (0.676), DTR (0.608), pct female (0.371), fleet/capita (0.291) |
+| **Prevented admissions (WHO scenario)** | 4,168 (0.45%, 95% CI: 0.41-0.48%) |
+| **Cost savings** | R$8.09 million |
+| **Placebo test** | p=0.84 (passed) |
+| **OVB robustness value** | 0.848 |
 
 ### Most affected cities
 
 | City | Mean CATE | Mean daily admissions |
 |------|-----------|----------------------|
-| Sao Paulo | +2.58 | 150.5 |
-| Brasilia | +1.38 | 54.6 |
-| Salvador | +1.13 | 29.9 |
-| Rio de Janeiro | +0.91 | 43.4 |
+| Sao Paulo | +3.13 | 150.5 |
+| Brasilia | +2.09 | 54.6 |
+| Porto Alegre | +1.47 | 41.5 |
+| Salvador | +1.38 | 29.9 |
+| Campo Grande | +1.15 | 14.6 |
 
 ---
 
 ## Overview
 
-This repository contains the complete analytical pipeline, manuscript, and reproducibility artifacts for a study applying **causal machine learning** to estimate heterogeneous health effects of air pollution across 17 Brazilian state capitals (2022-2025).
+This repository contains the complete analytical pipeline, manuscript, and reproducibility artifacts for a study applying **causal machine learning** to estimate heterogeneous health effects of air pollution across all 27 Brazilian state capitals (2022-2025).
 
 **Five contributions:**
 
 1. **Association to causation** — conditional ignorability with explicit sensitivity analyses
 2. **Average to heterogeneous effects** — CATEs across 8 effect modifiers
-3. **Single-city to national** — 17 capitals with complete data (21,035 city-days)
+3. **Single-city to national** — all 27 state capitals (33,280 city-days)
 4. **Black-box to explainable** — SHAP decomposition of causal heterogeneity
 5. **Estimates to policy** — counterfactual prevented admissions under WHO/CONAMA scenarios
 
@@ -51,7 +52,7 @@ This repository contains the complete analytical pipeline, manuscript, and repro
 
 | Source | Period | Records | Provider |
 |--------|--------|---------|----------|
-| Meteorology (19 variables) | 2015-2026 | 63,963 | ERA5 via Open-Meteo |
+| Meteorology (19 variables) | 2015-2026 | 78,583 | ERA5 via Open-Meteo |
 | Air Quality (7 pollutants) | 2022-2026 | 40,581 | CAMS/Copernicus |
 | Hospitalizations (ICD-10 J00-J99) | 2014-2025 | 196,369 | SIH/SUS DATASUS |
 | Demographics | 1970-2025 | 430 | IBGE Census 2022 |
@@ -178,12 +179,12 @@ After running, you will find:
 
 | Characteristic | Value |
 |---------------|-------|
-| City-days | 21,035 |
-| Capitals | 17 (of 27, with complete data overlap) |
-| Total admissions | 658,321 |
-| Mean daily admissions | 31.3 (IQR: 9-39) |
-| Mean PM2.5 | 11.4 ug/m3 (SD: 10.8) |
-| Treatment prevalence | 17.0% (PM2.5 > 15 ug/m3) |
+| City-days | 33,280 |
+| Capitals | 27 (all state capitals) |
+| Total admissions | 935,114 |
+| Mean daily admissions | 28.1 (IQR: 8-37) |
+| Mean PM2.5 | 10.7 ug/m3 (SD: 9.0) |
+| Treatment prevalence | 13.5% (PM2.5 > 15 ug/m3) |
 | Study period | August 2022 - December 2025 |
 | Features | 114 (weather, air quality, demographics, fleet, temporal) |
 
@@ -193,12 +194,12 @@ After running, you will find:
 
 | Test | Result | Interpretation |
 |------|--------|----------------|
-| Placebo (PM2.5 at t+7) | ATE = -0.54, p=0.82 | No residual confounding |
-| Leave-one-city-out jackknife | ATE range: 0.34-0.97, CV=0.22 | No single city drives result |
-| Omitted variable bias | Robustness value = 0.826 | Confounder needs R2 > 0.826 to nullify |
-| Threshold 25 ug/m3 | ATE = 0.38 (6.5% exceedance) | Consistent direction |
-| Threshold 35 ug/m3 | ATE = 0.42 (3.0% exceedance) | Consistent direction |
-| Threshold 50 ug/m3 | ATE = 1.72 (1.2% exceedance) | Wide CIs, low power |
+| Placebo (PM2.5 at t+7) | ATE = -0.53, p=0.84 | No residual confounding |
+| Leave-one-city-out jackknife | ATE range: 0.17-0.65, CV=0.21 | No single city drives result |
+| Omitted variable bias | Robustness value = 0.848 | Confounder needs R2 > 0.848 to nullify |
+| Threshold 25 ug/m3 | ATE = 0.84 (4.5% exceedance) | Consistent direction |
+| Threshold 35 ug/m3 | ATE = 1.00 (2.0% exceedance) | Consistent direction |
+| Threshold 50 ug/m3 | Skipped (0.8% exceedance) | Insufficient variation |
 
 ---
 

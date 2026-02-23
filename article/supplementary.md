@@ -94,14 +94,14 @@ Graduate Program in Urban Environmental Sustainability (PPGSAU), Federal Univers
 
 | Outcome | CF ATE | CF 95% CI | CF p-value | DML ATE | DML 95% CI | DML p-value |
 |---------|--------|-----------|------------|---------|------------|-------------|
-| Total Respiratory | 0.599 | [-3.670, 4.869] | 0.783 | **0.716** | **[0.083, 1.350]** | **0.027** |
-| Children (0--14) | 0.253 | [-2.511, 3.017] | 0.858 | 0.328 | [-0.072, 0.728] | 0.108 |
-| Adults (15--59) | 0.231 | [-1.301, 1.763] | 0.767 | **0.264** | **[0.033, 0.494]** | **0.025** |
-| Elderly (60+) | 0.207 | [-1.411, 1.824] | 0.802 | 0.210 | [-0.023, 0.443] | 0.077 |
-| Female | 0.193 | [-2.166, 2.552] | 0.873 | 0.258 | [-0.082, 0.598] | 0.137 |
-| Male | 0.372 | [-2.220, 2.965] | 0.778 | **0.418** | **[0.006, 0.830]** | **0.047** |
+| Total Respiratory | 0.390 | [-4.197, 4.976] | 0.868 | 0.128 | [-0.305, 0.561] | 0.563 |
+| Children (0--14) | 0.212 | [-2.603, 3.027] | 0.883 | 0.046 | [-0.229, 0.322] | 0.742 |
+| Adults (15--59) | 0.111 | [-1.324, 1.545] | 0.880 | 0.072 | [-0.080, 0.225] | 0.352 |
+| Elderly (60+) | 0.167 | [-1.534, 1.868] | 0.847 | 0.128 | [-0.060, 0.317] | 0.183 |
+| Female | 0.107 | [-2.355, 2.569] | 0.932 | 0.013 | [-0.242, 0.268] | 0.919 |
+| Male | 0.319 | [-2.432, 3.071] | 0.820 | 0.171 | [-0.099, 0.441] | 0.214 |
 
-Note: Bold indicates statistical significance at alpha = 0.05. ATE = Average Treatment Effect; CI = confidence interval. Treatment: PM2.5 > 15 ug/m3. Outcome: daily respiratory hospitalisations.
+Note: No estimates reached statistical significance at alpha = 0.05, reflecting the dominance of heterogeneity over the average effect. ATE = Average Treatment Effect; CI = confidence interval. Treatment: PM2.5 > 15 ug/m3. Outcome: daily respiratory hospitalisations. N = 33,280 city-days across 27 capitals.
 
 ---
 
@@ -115,55 +115,55 @@ The Classification Analysis (CLAN) sorts all city-day observations into quartile
 
 | Quartile | CATE | Pop. Density | Fleet/1000 | % Female | DTR (C) | % North | % NE | % CO | % SE | % South |
 |----------|------|-------------|------------|----------|---------|---------|------|------|------|---------|
-| Q1 (lowest) | -1.558 | 2,564 | 710 | 52.2% | 7.36 | 30.4% | 17.7% | 24.0% | 16.0% | 12.0% |
-| Q2 | +0.010 | 1,653 | 719 | 52.0% | 8.10 | 39.2% | 15.0% | 28.4% | 8.9% | 8.5% |
-| Q3 | +0.937 | 2,030 | 710 | 52.0% | 8.17 | 34.6% | 14.8% | 24.3% | 14.7% | 11.6% |
-| Q4 (highest) | +3.009 | 3,779 | 729 | 52.6% | 7.92 | 12.0% | 23.5% | 17.6% | 31.6% | 15.3% |
+| Q1 (lowest) | -1.944 | 3,211 | 671 | 52.4% | 6.59 | 29.5% | 36.6% | 8.1% | 15.2% | 10.5% |
+| Q2 | -0.199 | 2,199 | 727 | 52.3% | 7.83 | 26.3% | 37.9% | 15.8% | 14.1% | 5.9% |
+| Q3 | +0.658 | 2,197 | 719 | 52.3% | 8.12 | 30.0% | 30.4% | 17.5% | 11.1% | 11.1% |
+| Q4 (highest) | +3.044 | 3,342 | 695 | 52.7% | 7.66 | 15.5% | 29.7% | 18.2% | 19.3% | 17.3% |
 
 ### Table C.2: CLAN --- Children (0--14 years)
 
 | Quartile | CATE | Pop. Density | Fleet/1000 | % Female | DTR (C) | % North | % NE | % CO | % SE | % South |
 |----------|------|-------------|------------|----------|---------|---------|------|------|------|---------|
-| Q1 (lowest) | -1.187 | 2,369 | 693 | 52.1% | 7.75 | 33.0% | 15.7% | 27.6% | 15.7% | 8.0% |
-| Q2 | -0.086 | 1,863 | 742 | 52.0% | 8.25 | 31.2% | 14.7% | 33.8% | 10.8% | 9.5% |
-| Q3 | +0.452 | 1,978 | 716 | 52.0% | 8.21 | 40.1% | 13.0% | 20.2% | 14.1% | 12.6% |
-| Q4 (highest) | +1.834 | 3,816 | 717 | 52.6% | 7.34 | 11.9% | 27.6% | 12.8% | 30.5% | 17.3% |
+| Q1 (lowest) | -1.254 | 2,811 | 677 | 52.3% | 7.03 | 32.0% | 32.6% | 13.4% | 14.5% | 7.5% |
+| Q2 | -0.167 | 1,979 | 732 | 52.2% | 7.90 | 28.7% | 33.6% | 17.3% | 11.9% | 8.4% |
+| Q3 | +0.395 | 2,279 | 717 | 52.2% | 7.93 | 29.3% | 29.6% | 18.8% | 11.2% | 11.0% |
+| Q4 (highest) | +1.876 | 3,878 | 687 | 52.9% | 7.33 | 11.2% | 38.8% | 10.1% | 22.0% | 17.8% |
 
 ### Table C.3: CLAN --- Adults (15--59 years)
 
 | Quartile | CATE | Pop. Density | Fleet/1000 | % Female | DTR (C) | % North | % NE | % CO | % SE | % South |
 |----------|------|-------------|------------|----------|---------|---------|------|------|------|---------|
-| Q1 (lowest) | -0.564 | 3,181 | 725 | 52.4% | 6.97 | 22.6% | 25.8% | 15.2% | 22.3% | 14.2% |
-| Q2 | +0.017 | 1,778 | 716 | 51.9% | 8.17 | 39.1% | 13.9% | 26.0% | 10.5% | 10.5% |
-| Q3 | +0.365 | 1,812 | 703 | 52.0% | 8.19 | 36.0% | 12.2% | 29.1% | 11.7% | 10.8% |
-| Q4 (highest) | +1.109 | 3,257 | 724 | 52.5% | 8.22 | 18.5% | 19.1% | 24.1% | 26.6% | 11.7% |
+| Q1 (lowest) | -0.663 | 3,836 | 689 | 52.7% | 6.45 | 16.1% | 45.8% | 7.5% | 19.5% | 11.3% |
+| Q2 | -0.047 | 2,045 | 712 | 52.1% | 7.68 | 36.1% | 28.8% | 14.7% | 11.4% | 9.0% |
+| Q3 | +0.251 | 2,011 | 734 | 52.2% | 8.35 | 28.2% | 28.6% | 19.5% | 10.2% | 13.5% |
+| Q4 (highest) | +0.902 | 3,058 | 678 | 52.6% | 7.70 | 20.9% | 31.6% | 18.0% | 18.6% | 11.0% |
 
 ### Table C.4: CLAN --- Elderly (60+ years)
 
 | Quartile | CATE | Pop. Density | Fleet/1000 | % Female | DTR (C) | % North | % NE | % CO | % SE | % South |
 |----------|------|-------------|------------|----------|---------|---------|------|------|------|---------|
-| Q1 (lowest) | -0.822 | 2,969 | 702 | 52.4% | 6.85 | 26.9% | 23.3% | 13.5% | 17.9% | 18.4% |
-| Q2 | -0.012 | 1,418 | 708 | 51.8% | 8.44 | 42.9% | 10.9% | 27.2% | 7.9% | 11.1% |
-| Q3 | +0.396 | 1,875 | 727 | 51.9% | 8.29 | 32.0% | 12.7% | 31.7% | 12.7% | 10.9% |
-| Q4 (highest) | +1.266 | 3,767 | 732 | 52.7% | 7.97 | 14.3% | 24.2% | 21.9% | 32.7% | 6.9% |
+| Q1 (lowest) | -0.727 | 3,218 | 687 | 52.5% | 6.66 | 22.6% | 38.1% | 8.9% | 14.9% | 15.5% |
+| Q2 | -0.099 | 1,705 | 708 | 51.9% | 7.92 | 39.6% | 24.0% | 15.2% | 12.5% | 8.8% |
+| Q3 | +0.263 | 1,889 | 715 | 52.1% | 8.07 | 31.1% | 30.6% | 18.2% | 10.9% | 9.2% |
+| Q4 (highest) | +1.231 | 4,137 | 703 | 53.0% | 7.54 | 8.0% | 41.9% | 17.5% | 21.3% | 11.3% |
 
 ### Table C.5: CLAN --- Female
 
 | Quartile | CATE | Pop. Density | Fleet/1000 | % Female | DTR (C) | % North | % NE | % CO | % SE | % South |
 |----------|------|-------------|------------|----------|---------|---------|------|------|------|---------|
-| Q1 (lowest) | -0.976 | 3,220 | 750 | 52.4% | 7.38 | 15.7% | 23.4% | 21.0% | 23.4% | 16.4% |
-| Q2 | -0.074 | 1,712 | 720 | 51.9% | 8.61 | 41.0% | 8.7% | 29.0% | 13.2% | 8.1% |
-| Q3 | +0.388 | 1,710 | 718 | 51.9% | 8.39 | 38.3% | 12.0% | 28.4% | 8.6% | 12.6% |
-| Q4 (highest) | +1.434 | 3,385 | 681 | 52.5% | 7.17 | 21.1% | 26.9% | 16.0% | 25.9% | 10.1% |
+| Q1 (lowest) | -1.205 | 3,659 | 687 | 52.6% | 6.63 | 18.7% | 44.8% | 9.5% | 16.2% | 10.8% |
+| Q2 | -0.150 | 1,965 | 710 | 52.2% | 7.86 | 31.2% | 31.4% | 16.7% | 12.5% | 8.3% |
+| Q3 | +0.337 | 2,118 | 735 | 52.1% | 8.09 | 30.0% | 26.0% | 18.9% | 13.3% | 11.9% |
+| Q4 (highest) | +1.446 | 3,206 | 681 | 52.6% | 7.61 | 21.4% | 32.5% | 14.5% | 17.6% | 13.9% |
 
 ### Table C.6: CLAN --- Male
 
 | Quartile | CATE | Pop. Density | Fleet/1000 | % Female | DTR (C) | % North | % NE | % CO | % SE | % South |
 |----------|------|-------------|------------|----------|---------|---------|------|------|------|---------|
-| Q1 (lowest) | -1.130 | 2,316 | 651 | 52.2% | 6.82 | 37.9% | 21.8% | 20.0% | 10.4% | 10.0% |
-| Q2 | -0.039 | 1,691 | 743 | 51.8% | 8.57 | 36.5% | 14.0% | 32.2% | 9.0% | 8.3% |
-| Q3 | +0.586 | 2,000 | 728 | 52.0% | 8.10 | 35.1% | 11.1% | 22.4% | 16.7% | 14.7% |
-| Q4 (highest) | +2.075 | 4,018 | 745 | 52.7% | 8.06 | 6.8% | 24.2% | 19.8% | 34.9% | 14.3% |
+| Q1 (lowest) | -1.099 | 2,720 | 655 | 52.3% | 6.47 | 34.7% | 32.8% | 8.6% | 14.8% | 9.0% |
+| Q2 | -0.110 | 2,117 | 740 | 52.1% | 8.36 | 30.4% | 33.6% | 17.8% | 11.0% | 7.2% |
+| Q3 | +0.488 | 2,337 | 714 | 52.4% | 7.77 | 26.9% | 33.2% | 16.4% | 11.5% | 12.0% |
+| Q4 (highest) | +2.000 | 3,776 | 704 | 52.8% | 7.59 | 9.2% | 35.0% | 16.9% | 22.3% | 16.5% |
 
 ---
 
@@ -175,25 +175,35 @@ The Classification Analysis (CLAN) sorts all city-day observations into quartile
 
 | City | UF | Region | Mean CATE | Median CATE | SD | N obs | Mean daily admissions |
 |------|----|---------|-----------|-----------|----|-------|----------------------|
-| Sao Paulo | SP | SE | **+2.577** | +3.291 | 3.582 | 1,247 | 150.5 |
-| Brasilia | DF | CO | +1.381 | +1.115 | 2.033 | 1,247 | 54.6 |
-| Salvador | BA | NE | +1.127 | +0.566 | 2.498 | 1,246 | 29.9 |
-| Rio de Janeiro | RJ | SE | +0.909 | +0.957 | 1.135 | 1,247 | 43.4 |
-| Campo Grande | MS | CO | +0.820 | +0.747 | 1.015 | 1,237 | 14.6 |
-| Florianopolis | SC | S | +0.693 | +0.739 | 1.253 | 1,241 | 14.5 |
-| Aracaju | SE | NE | +0.692 | +0.767 | 1.845 | 1,245 | 13.3 |
-| Natal | RN | NE | +0.656 | +0.696 | 1.727 | 1,244 | 13.3 |
-| Belo Horizonte | MG | SE | +0.568 | +0.797 | 2.183 | 1,246 | 47.2 |
-| Porto Velho | RO | N | +0.443 | +0.425 | 0.622 | 1,215 | 6.4 |
-| Curitiba | PR | S | +0.334 | +0.599 | 2.427 | 1,245 | 44.4 |
-| Belem | PA | N | +0.320 | +0.216 | 1.515 | 1,231 | 24.4 |
-| Rio Branco | AC | N | +0.300 | +0.280 | 0.500 | 1,199 | 5.0 |
-| Goiania | GO | CO | +0.146 | +0.082 | 0.875 | 1,247 | 21.2 |
-| Macapa | AP | N | +0.002 | +0.216 | 1.192 | 1,232 | 7.0 |
-| Manaus | AM | N | **-0.395** | -0.548 | 1.907 | 1,234 | 31.1 |
-| Cuiaba | MT | CO | **-0.428** | -0.307 | 0.976 | 1,232 | 8.9 |
+| Sao Paulo | SP | SE | **+3.126** | +4.452 | 4.886 | 1,247 | 150.5 |
+| Brasilia | DF | CO | +2.090 | +1.635 | 2.199 | 1,247 | 54.6 |
+| Porto Alegre | RS | S | +1.469 | +1.403 | 1.981 | 1,241 | 41.5 |
+| Salvador | BA | NE | +1.382 | +0.937 | 2.423 | 1,246 | 29.9 |
+| Campo Grande | MS | CO | +1.152 | +1.093 | 1.027 | 1,237 | 14.6 |
+| Aracaju | SE | NE | +0.895 | +0.784 | 1.226 | 1,245 | 13.3 |
+| Maceio | AL | NE | +0.822 | +0.393 | 1.495 | 1,245 | 11.6 |
+| Rio de Janeiro | RJ | SE | +0.775 | +0.709 | 1.063 | 1,247 | 43.4 |
+| Florianopolis | SC | S | +0.743 | +0.861 | 1.332 | 1,241 | 14.5 |
+| Belem | PA | N | +0.726 | +0.790 | 2.331 | 1,231 | 24.4 |
+| Fortaleza | CE | NE | +0.536 | +0.123 | 3.597 | 1,246 | 45.7 |
+| Natal | RN | NE | +0.422 | +0.256 | 1.550 | 1,244 | 13.3 |
+| Goiania | GO | CO | +0.326 | +0.339 | 0.774 | 1,247 | 21.2 |
+| Porto Velho | RO | N | +0.257 | +0.258 | 0.633 | 1,215 | 6.4 |
+| Rio Branco | AC | N | +0.241 | +0.275 | 0.379 | 1,199 | 5.0 |
+| Palmas | TO | N | +0.178 | +0.149 | 0.552 | 1,163 | 4.9 |
+| Macapa | AP | N | +0.142 | +0.518 | 1.517 | 1,232 | 7.0 |
+| Belo Horizonte | MG | SE | +0.060 | +0.119 | 2.582 | 1,246 | 47.2 |
+| Teresina | PI | NE | +0.051 | +0.028 | 0.436 | 1,245 | 14.1 |
+| Joao Pessoa | PB | NE | -0.282 | -0.002 | 1.402 | 1,243 | 19.0 |
+| Recife | PE | NE | -0.364 | -0.600 | 1.727 | 1,246 | 52.3 |
+| Vitoria | ES | SE | -0.389 | -0.366 | 0.577 | 1,221 | 6.3 |
+| Curitiba | PR | S | -0.461 | -0.295 | 2.386 | 1,245 | 44.4 |
+| Manaus | AM | N | -0.551 | -1.048 | 1.997 | 1,234 | 31.1 |
+| Cuiaba | MT | CO | -0.555 | -0.425 | 1.062 | 1,232 | 8.9 |
+| Sao Luis | MA | NE | -0.949 | -0.862 | 1.012 | 1,244 | 17.3 |
+| Boa Vista | RR | N | **-1.525** | -1.915 | 1.420 | 1,151 | 10.9 |
 
-Note: Sorted by mean CATE (descending). Bold indicates highest and lowest values.
+Note: Sorted by mean CATE (descending). Bold indicates highest and lowest values. All 27 state capitals included.
 
 ---
 
@@ -205,15 +215,15 @@ Note: Sorted by mean CATE (descending). Bold indicates highest and lowest values
 
 | Rank | Feature | Mean |SHAP| | Description |
 |------|---------|----------------|-------------|
-| 1 | dtr | 0.594 | Diurnal temperature range (C) |
-| 2 | pop_density | 0.457 | Population density (inhabitants/km2) |
-| 3 | fleet_per_capita | 0.292 | Vehicles per 1,000 inhabitants |
-| 4 | pct_female | 0.265 | Proportion female in population |
-| 5 | region_CO | 0.045 | Central-West region indicator |
-| 6 | region_NE | 0.025 | Northeast region indicator |
-| 7 | region_N | 0.024 | North region indicator |
-| 8 | region_S | 0.023 | South region indicator |
-| 9 | region_SE | 0.021 | Southeast region indicator |
+| 1 | pop_density | 0.676 | Population density (inhabitants/km2) |
+| 2 | dtr | 0.608 | Diurnal temperature range (C) |
+| 3 | pct_female | 0.371 | Proportion female in population |
+| 4 | fleet_per_capita | 0.291 | Vehicles per 1,000 inhabitants |
+| 5 | region_CO | 0.059 | Central-West region indicator |
+| 6 | region_NE | 0.037 | Northeast region indicator |
+| 7 | region_S | 0.033 | South region indicator |
+| 8 | region_SE | 0.026 | Southeast region indicator |
+| 9 | region_N | 0.016 | North region indicator |
 
 Note: SHAP values decompose heterogeneity in Conditional Average Treatment Effects, not outcome prediction. Higher values indicate greater contribution to CATE variation across observations.
 
@@ -227,54 +237,64 @@ Note: SHAP values decompose heterogeneity in Conditional Average Treatment Effec
 
 | City | Total admissions | Treated days | Prevented admissions | Mean CATE | Prevented (%) |
 |------|-----------------|-------------|---------------------|-----------|---------------|
-| Sao Paulo | 187,646 | 864 | 2,268.5 | +2.577 | 1.21% |
-| Rio de Janeiro | 54,132 | 862 | 840.1 | +0.909 | 1.55% |
-| Belo Horizonte | 58,791 | 177 | 286.4 | +0.568 | 0.49% |
-| Curitiba | 55,219 | 147 | 249.6 | +0.334 | 0.45% |
-| Rio Branco | 5,975 | 286 | 170.1 | +0.300 | 2.85% |
-| Porto Velho | 7,818 | 365 | 63.9 | +0.443 | 0.82% |
-| Brasilia | 68,030 | 40 | 54.0 | +1.381 | 0.08% |
-| Florianopolis | 18,049 | 61 | 48.1 | +0.693 | 0.27% |
-| Campo Grande | 18,030 | 87 | 42.6 | +0.820 | 0.24% |
-| Salvador | 37,235 | 13 | 27.7 | +1.127 | 0.07% |
-| Natal | 16,487 | 20 | 14.4 | +0.656 | 0.09% |
-| Macapa | 8,568 | 18 | 10.0 | +0.002 | 0.12% |
-| Goiania | 26,479 | 86 | 9.9 | +0.146 | 0.04% |
-| Aracaju | 16,572 | 1 | -0.6 | +0.692 | -0.00% |
-| Belem | 29,976 | 42 | -15.5 | +0.320 | -0.05% |
-| Cuiaba | 10,923 | 161 | -27.6 | -0.428 | -0.25% |
-| Manaus | 38,391 | 355 | -208.1 | -0.395 | -0.54% |
-| **Total** | **658,321** | **3,585** | **3,833.7** | -- | **0.58%** |
+| Sao Paulo | 187,646 | 864 | 2,860.8 | +3.126 | 1.52% |
+| Rio de Janeiro | 54,132 | 862 | 710.6 | +0.775 | 1.31% |
+| Porto Alegre | 51,476 | 236 | 341.5 | +1.469 | 0.66% |
+| Belo Horizonte | 58,791 | 177 | 224.5 | +0.060 | 0.38% |
+| Curitiba | 55,219 | 147 | 157.0 | -0.461 | 0.28% |
+| Rio Branco | 5,975 | 286 | 119.8 | +0.241 | 2.01% |
+| Brasilia | 68,030 | 40 | 93.0 | +2.090 | 0.14% |
+| Campo Grande | 18,030 | 87 | 75.5 | +1.152 | 0.42% |
+| Florianopolis | 18,049 | 61 | 44.1 | +0.743 | 0.24% |
+| Goiania | 26,479 | 86 | 38.9 | +0.326 | 0.15% |
+| Palmas | 5,737 | 117 | 38.7 | +0.178 | 0.67% |
+| Salvador | 37,235 | 13 | 26.3 | +1.382 | 0.07% |
+| Natal | 16,487 | 20 | 14.0 | +0.422 | 0.08% |
+| Macapa | 8,568 | 18 | 12.4 | +0.142 | 0.15% |
+| Maceio | 14,504 | 6 | 3.1 | +0.822 | 0.02% |
+| Aracaju | 16,572 | 1 | -1.0 | +0.895 | -0.01% |
+| Teresina | 17,608 | 96 | -2.3 | +0.051 | -0.01% |
+| Belem | 29,976 | 42 | -4.1 | +0.726 | -0.01% |
+| Cuiaba | 10,923 | 161 | -28.2 | -0.555 | -0.26% |
+| Porto Velho | 7,818 | 365 | -27.3 | +0.257 | -0.35% |
+| Fortaleza | 56,908 | 50 | -30.8 | +0.536 | -0.05% |
+| Joao Pessoa | 23,623 | 55 | -33.3 | -0.282 | -0.14% |
+| Recife | 65,112 | 68 | -37.2 | -0.364 | -0.06% |
+| Sao Luis | 21,545 | 38 | -21.8 | -0.949 | -0.10% |
+| Vitoria | 7,730 | 175 | -38.8 | -0.389 | -0.50% |
+| Boa Vista | 12,550 | 78 | -119.8 | -1.525 | -0.95% |
+| Manaus | 38,391 | 355 | -248.2 | -0.551 | -0.65% |
+| **Total** | **935,114** | **4,504** | **4,167.6** | -- | **0.45%** |
 
-Note: Negative prevented admissions indicate cities where the CATE is negative, suggesting possible harvesting effects or unmeasured protective factors. Treated days = days PM2.5 exceeded 15 ug/m3.
+Note: Negative prevented admissions indicate cities where the CATE is negative, suggesting possible harvesting effects or unmeasured protective factors. Treated days = days PM2.5 exceeded 15 ug/m3. All 27 state capitals included.
 
 ### Table F.2: Prevented Admissions by CATE Vulnerability Quartile
 
 | Quartile | N obs | Total admissions | Treated days | Prevented admissions | Mean CATE | Prevented (%) |
 |----------|-------|-----------------|-------------|---------------------|-----------|---------------|
-| Q1 (least vulnerable) | 5,260 | 172,613 | 786 | -1,339.5 | -1.558 | -0.78% |
-| Q2 | 5,260 | 105,846 | 733 | +13.9 | +0.010 | +0.01% |
-| Q3 | 5,257 | 128,783 | 861 | +809.6 | +0.937 | +0.63% |
-| Q4 (most vulnerable) | 5,258 | 251,079 | 1,205 | +4,349.7 | +3.009 | +1.73% |
+| Q1 (least vulnerable) | 8,321 | 261,686 | 948 | -2,022.5 | -1.944 | -0.77% |
+| Q2 | 8,322 | 157,350 | 984 | -185.6 | -0.199 | -0.12% |
+| Q3 | 8,318 | 174,713 | 1,173 | +742.6 | +0.658 | +0.43% |
+| Q4 (most vulnerable) | 8,319 | 341,365 | 1,399 | +5,633.2 | +3.044 | +1.65% |
 
-Note: The Q4 quartile alone accounts for 4,350 of the 3,834 net prevented admissions. The net total is lower because Q1 shows negative prevented admissions.
+Note: The Q4 quartile alone accounts for 5,633 of the 4,168 net prevented admissions. The net total is lower because Q1 and Q2 show negative prevented admissions.
 
 ### Table F.3: Dose-Response Policy Curve --- Alternative Thresholds
 
 | Threshold (ug/m3) | Exceedance days | Exceedance (%) | Prevented admissions | Prevented (%) |
 |-------------------|----------------|----------------|---------------------|---------------|
-| 15 (WHO AQG) | 3,585 | 17.04% | 3,833.7 | 0.58% |
-| 25 (CONAMA intermediate) | 1,371 | 6.52% | 1,564.8 | 0.24% |
-| 35 (CONAMA final) | 633 | 3.01% | 553.3 | 0.08% |
-| 50 (pre-2024 standard) | 253 | 1.20% | 144.4 | 0.02% |
+| 15 (WHO AQG) | 4,504 | 13.53% | 4,167.6 | 0.45% |
+| 25 (CONAMA intermediate) | 1,487 | 4.47% | 1,805.0 | 0.19% |
+| 35 (CONAMA final) | 660 | 1.98% | 575.5 | 0.06% |
+| 50 (pre-2024 standard) | 256 | 0.77% | 122.0 | 0.01% |
 
 ### Table F.4: Bootstrap Confidence Interval for Prevented Fraction
 
 | Metric | Value |
 |--------|-------|
-| Mean prevented (%) | 0.58% |
-| 95% CI lower | 0.54% |
-| 95% CI upper | 0.62% |
+| Mean prevented (%) | 0.44% |
+| 95% CI lower | 0.41% |
+| 95% CI upper | 0.48% |
 | Bootstrap resamples | 1,000 |
 
 ---
@@ -287,13 +307,13 @@ Note: The Q4 quartile alone accounts for 4,350 of the 3,834 net prevented admiss
 
 | Metric | Value |
 |--------|-------|
-| Total SUS respiratory costs (study period) | R$ 1,282,441,262 |
-| Total admissions | 658,321 |
-| Mean cost per admission | R$ 1,948.05 |
-| Prevented admissions (WHO scenario) | 3,833.7 |
-| Saved costs | R$ 7,468,189 |
-| Saved costs (% of total) | 0.58% |
-| Saved costs (USD, approx.) | USD 1,494,000 |
+| Total SUS respiratory costs (study period) | R$ 1,815,748,569 |
+| Total admissions | 935,114 |
+| Mean cost per admission | R$ 1,941.74 |
+| Prevented admissions (WHO scenario) | 4,167.6 |
+| Saved costs | R$ 8,092,492 |
+| Saved costs (% of total) | 0.45% |
+| Saved costs (USD, approx.) | USD 1,619,000 |
 
 Note: Costs based on SIH/SUS reimbursement data. USD conversion at approximate 2024 exchange rate of R$5.00/USD.
 
@@ -308,50 +328,60 @@ Note: Costs based on SIH/SUS reimbursement data. USD conversion at approximate 2
 | Metric | Value |
 |--------|-------|
 | Test | Future PM2.5 (7-day lead) as placebo treatment |
-| ATE | -0.540 |
-| 95% CI | [-5.280, 4.200] |
-| p-value | 0.823 |
+| ATE | -0.534 |
+| 95% CI | [-5.727, 4.660] |
+| p-value | 0.840 |
 | Result | **Passed** (null effect of future pollution on current admissions) |
 
 ### Table H.2: Leave-One-City-Out Jackknife
 
 | Excluded city | ATE | 95% CI | p-value | N rows |
 |--------------|-----|--------|---------|--------|
-| Aracaju | 0.716 | [-4.241, 5.673] | 0.777 | 19,790 |
-| Belo Horizonte | 0.654 | [-4.609, 5.918] | 0.808 | 19,789 |
-| Belem | 0.687 | [-4.550, 5.923] | 0.797 | 19,804 |
-| Brasilia | 0.623 | [-4.391, 5.636] | 0.808 | 19,788 |
-| Campo Grande | 0.747 | [-4.672, 6.165] | 0.787 | 19,798 |
-| Cuiaba | 0.859 | [-4.884, 6.602] | 0.769 | 19,803 |
-| Curitiba | **0.970** | [-4.232, 6.172] | 0.715 | 19,790 |
-| Florianopolis | 0.636 | [-4.770, 6.043] | 0.818 | 19,794 |
-| Goiania | 0.672 | [-4.782, 6.126] | 0.809 | 19,788 |
-| Macapa | 0.802 | [-4.583, 6.187] | 0.770 | 19,803 |
-| Manaus | 0.803 | [-5.321, 6.927] | 0.797 | 19,801 |
-| Natal | 0.450 | [-4.547, 5.448] | 0.860 | 19,791 |
-| Porto Velho | 0.795 | [-4.528, 6.119] | 0.770 | 19,820 |
-| Rio Branco | 0.710 | [-4.490, 5.910] | 0.789 | 19,836 |
-| Rio de Janeiro | 0.822 | [-6.334, 7.979] | 0.822 | 19,788 |
-| Salvador | 0.542 | [-4.561, 5.644] | 0.835 | 19,789 |
-| Sao Paulo | **0.339** | [-3.598, 4.275] | 0.866 | 19,788 |
+| Aracaju | 0.595 | [-4.795, 5.984] | 0.829 | 32,035 |
+| Belo Horizonte | 0.653 | [-5.105, 6.411] | 0.824 | 32,034 |
+| Belem | 0.475 | [-5.094, 6.043] | 0.867 | 32,049 |
+| Boa Vista | 0.532 | [-5.233, 6.298] | 0.856 | 32,129 |
+| Brasilia | 0.354 | [-4.986, 5.694] | 0.897 | 32,033 |
+| Campo Grande | 0.592 | [-5.292, 6.477] | 0.844 | 32,043 |
+| Cuiaba | 0.509 | [-4.962, 5.979] | 0.855 | 32,048 |
+| Curitiba | 0.609 | [-4.588, 5.806] | 0.818 | 32,035 |
+| Florianopolis | 0.357 | [-5.117, 5.830] | 0.898 | 32,039 |
+| Fortaleza | 0.551 | [-4.580, 5.681] | 0.833 | 32,034 |
+| Goiania | 0.418 | [-5.294, 6.130] | 0.886 | 32,033 |
+| Joao Pessoa | 0.474 | [-4.974, 5.922] | 0.865 | 32,037 |
+| Macapa | 0.534 | [-4.983, 6.050] | 0.850 | 32,048 |
+| Maceio | 0.642 | [-4.916, 6.200] | 0.821 | 32,035 |
+| Manaus | 0.545 | [-5.134, 6.224] | 0.851 | 32,046 |
+| Natal | 0.479 | [-5.123, 6.081] | 0.867 | 32,036 |
+| Palmas | 0.614 | [-4.857, 6.084] | 0.826 | 32,117 |
+| Porto Alegre | 0.479 | [-4.809, 5.768] | 0.859 | 32,039 |
+| Porto Velho | 0.643 | [-4.972, 6.258] | 0.823 | 32,065 |
+| Recife | 0.540 | [-4.914, 5.993] | 0.846 | 32,034 |
+| Rio Branco | 0.533 | [-5.022, 6.087] | 0.851 | 32,081 |
+| Rio de Janeiro | 0.516 | [-5.198, 6.229] | 0.860 | 32,033 |
+| Salvador | 0.616 | [-4.661, 5.892] | 0.819 | 32,034 |
+| Sao Luis | 0.574 | [-4.897, 6.046] | 0.837 | 32,036 |
+| Sao Paulo | **0.168** | [-4.132, 4.469] | 0.939 | 32,033 |
+| Teresina | 0.553 | [-5.403, 6.509] | 0.856 | 32,035 |
+| Vitoria | **0.646** | [-5.031, 6.324] | 0.823 | 32,059 |
 
 | Summary statistic | Value |
 |-------------------|-------|
-| Minimum ATE | 0.339 (excl. Sao Paulo) |
-| Maximum ATE | 0.970 (excl. Curitiba) |
-| Mean ATE | 0.696 |
-| Coefficient of variation | 0.22 |
+| Minimum ATE | 0.168 (excl. Sao Paulo) |
+| Maximum ATE | 0.653 (excl. Belo Horizonte) |
+| Mean ATE | 0.526 |
+| Coefficient of variation | 0.21 |
 
-Note: Bold indicates minimum and maximum ATE values. No single city exclusion changes the direction of the main finding.
+Note: Bold indicates minimum and maximum ATE values. No single city exclusion changes the direction of the main finding. All 27 capitals included in jackknife analysis.
 
 ### Table H.3: Threshold Sensitivity (Causal Forest ATE)
 
 | Threshold (ug/m3) | ATE | 95% CI | p-value | Treatment prevalence |
 |-------------------|-----|--------|---------|---------------------|
-| 15 (primary) | 0.625 | [-4.336, 5.587] | 0.805 | 17.04% |
-| 25 | 0.375 | [-12.130, 12.880] | 0.953 | 6.52% |
-| 35 | 0.423 | [-15.205, 16.050] | 0.958 | 3.01% |
-| 50 | 1.717 | [-72.189, 75.623] | 0.964 | 1.20% |
+| 15 (primary) | 0.533 | [-4.602, 5.669] | 0.839 | 13.53% |
+| 25 | 0.840 | [-14.721, 16.401] | 0.916 | 4.47% |
+| 35 | 1.003 | [-21.622, 23.628] | 0.931 | 1.98% |
+| 50 | -- | -- | -- | 0.77% (skipped, insufficient variation) |
 
 Note: As the threshold increases, treatment prevalence decreases and confidence intervals widen substantially, reflecting reduced statistical power.
 
@@ -359,14 +389,14 @@ Note: As the threshold increases, treatment prevalence decreases and confidence 
 
 | Metric | Value |
 |--------|-------|
-| R2 of Y given W (observed confounders) | 0.2386 |
-| Pseudo-R2 of T given W | 0.1037 |
-| Residual variance of Y | 0.7614 |
-| Residual variance of T | 0.8963 |
-| **Robustness value** | **0.8261** |
-| Interpretation | An unobserved confounder would need partial R2 of at least 0.826 with both Y and T (after controlling for observed confounders) to reduce the ATE to zero. |
+| R2 of Y given W (observed confounders) | 0.1978 |
+| Pseudo-R2 of T given W | 0.1040 |
+| Residual variance of Y | 0.8022 |
+| Residual variance of T | 0.8960 |
+| **Robustness value** | **0.8478** |
+| Interpretation | An unobserved confounder would need partial R2 of at least 0.848 with both Y and T (after controlling for observed confounders) to reduce the ATE to zero. |
 
-Note: The robustness value of 0.826 indicates that any unobserved confounder would need to explain more variance than the entire set of observed confounders combined --- an implausibly strong requirement.
+Note: The robustness value of 0.848 indicates that any unobserved confounder would need to explain more variance than the entire set of observed confounders combined --- an implausibly strong requirement.
 
 ---
 
@@ -376,7 +406,7 @@ Note: The robustness value of 0.826 indicates that any unobserved confounder wou
 
 ### Figure S1: CATE Map of Brazil
 
-Geospatial map of estimated Conditional Average Treatment Effects (CATEs) across 17 Brazilian state capitals. Dot colour represents CATE magnitude (blue = negative/low, red = high); dot size represents confidence interval width.
+Geospatial map of estimated Conditional Average Treatment Effects (CATEs) across all 27 Brazilian state capitals. Colour represents CATE magnitude (blue = negative/low, red = high).
 
 ![Figure S1: CATE Map of Brazil](../outputs/figures/cate_map_brazil.pdf){width=100%}
 
@@ -440,7 +470,7 @@ SHAP dependence plot for fleet per capita (vehicles per 1,000 inhabitants).
 
 ### Figure S9: Policy --- Prevented Admissions by City
 
-Bar chart showing prevented respiratory hospitalisations under WHO compliance for each of the 17 capitals, sorted by magnitude.
+Bar chart showing prevented respiratory hospitalisations under WHO compliance for each of the 27 state capitals, sorted by magnitude.
 
 ![Figure S9: Prevented Admissions by City](../outputs/figures/policy_city_prevented.pdf){width=100%}
 
