@@ -5,7 +5,7 @@
 - **Created:** 2026-02-21
 - **Status:** Phase 5 — Complete (pipeline executed, manuscript finalized)
 - **PI:** Lucas Rover (UTFPR)
-- **Supervisor:** Dra. Yara de Souza Tadano
+- **Supervisor:** Yara de Souza Tadano
 - **Pipeline:** Paper Factory v1.0 (Study Conductor)
 
 ---
