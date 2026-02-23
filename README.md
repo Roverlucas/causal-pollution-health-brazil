@@ -210,8 +210,8 @@ After running, you will find:
 
 ## Authors
 
-- **Lucas Rover** — Graduate Program in Electrical and Computer Engineering (CPGEI), UTFPR
-- **Yara de Souza Tadano** — CPGEI, UTFPR (Supervisor)
+- **Lucas Rover** — Graduate Program in Urban Environmental Sustainability (PPGSAU), UTFPR ([ORCID](https://orcid.org/0000-0001-6641-9224))
+- **Yara de Souza Tadano** — PPGSAU, UTFPR (Supervisor) ([ORCID](https://orcid.org/0000-0002-3975-3419))
 
 ## Citation
 

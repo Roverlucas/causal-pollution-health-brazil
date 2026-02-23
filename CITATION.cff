@@ -5,12 +5,12 @@ type: software
 authors:
   - family-names: Rover
     given-names: Lucas
-    orcid: ""
-    affiliation: "Federal University of Technology - Parana (UTFPR)"
+    orcid: "https://orcid.org/0000-0001-6641-9224"
+    affiliation: "Graduate Program in Urban Environmental Sustainability (PPGSAU), Federal University of Technology - Parana (UTFPR)"
   - family-names: Tadano
     given-names: Yara de Souza
-    orcid: ""
-    affiliation: "Federal University of Technology - Parana (UTFPR)"
+    orcid: "https://orcid.org/0000-0002-3975-3419"
+    affiliation: "Graduate Program in Urban Environmental Sustainability (PPGSAU), Federal University of Technology - Parana (UTFPR)"
 repository-code: "https://github.com/Roverlucas/causal-pollution-health-brazil"
 url: "https://github.com/Roverlucas/causal-pollution-health-brazil"
 license: MIT

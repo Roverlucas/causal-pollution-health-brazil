@@ -1,10 +1,10 @@
 # Who Suffers Most? Causal Machine Learning Reveals Heterogeneous Health Effects of Air Pollution Across 27 Brazilian State Capitals
 
-Lucas Rover^1^, Yara de Souza Tadano^1^
+Lucas Rover^1^ (ORCID: 0000-0001-6641-9224), Yara de Souza Tadano^1^ (ORCID: 0000-0002-3975-3419)
 
-^1^ Graduate Program in Electrical and Computer Engineering (CPGEI), Federal University of Technology -- Parana (UTFPR), Curitiba, PR, Brazil
+^1^ Graduate Program in Urban Environmental Sustainability (PPGSAU), Federal University of Technology -- Parana (UTFPR), Curitiba, PR, Brazil
 
-**Correspondence:** Lucas Rover, UTFPR, Av. Sete de Setembro 3165, Curitiba, PR 80230-901, Brazil.
+**Correspondence:** Lucas Rover, lucasrover@alunos.utfpr.edu.br, UTFPR, Av. Sete de Setembro 3165, Curitiba, PR 80230-901, Brazil.
 
 ---
 
